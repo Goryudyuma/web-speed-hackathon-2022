@@ -1,5 +1,6 @@
 import { join } from "path";
 
+import fastifyModernImages from "fastify-modern-images";
 import fastifyStatic from "fastify-static";
 
 /**
@@ -11,6 +12,9 @@ export const spaRoute = async (fastify) => {
     wildcard: false,
     preCompressed: true,
     maxAge: 10000,
+  })
+  .register(fastifyModernImages, {
+     quality : 7,
   });
 
   fastify.get("/favicon.ico", () => {
