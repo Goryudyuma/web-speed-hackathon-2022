@@ -92,7 +92,7 @@ const Item = ({ race }) => {
 
         <Stack.Item grow={0} shrink={0}>
           <Stack horizontal alignItems="center" gap={Space * 2}>
-            <img src={race.image.slice(0,-3)+"webp?height=100&width=100"} />
+            <img src={race.image+"?height=100&width=100"} />
             <RaceButton to={`/races/${race.id}/race-card`}>投票</RaceButton>
           </Stack>
         </Stack.Item>

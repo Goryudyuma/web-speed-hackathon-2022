@@ -4,7 +4,7 @@ const path = require("path");
 const CompressionPlugin = require("compression-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const nodeExternals = require("webpack-node-externals");
-const ImageminWebpWebpackPlugin= require("imagemin-webp-webpack-plugin");
+//const ImageminWebpWebpackPlugin= require("imagemin-webp-webpack-plugin");
 
 function abs(...args) {
   return path.join(__dirname, ...args);
@@ -60,7 +60,7 @@ module.exports = [
         patterns: [{ from: PUBLIC_ROOT, to: DIST_PUBLIC }],
       }),
       new CompressionPlugin(),
-      new ImageminWebpWebpackPlugin(),
+      //new ImageminWebpWebpackPlugin(),
     ],
     resolve: {
       extensions: [".js", ".jsx"],
